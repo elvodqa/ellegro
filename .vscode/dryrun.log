@@ -1,0 +1,11 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory `/Users/emircengiz/Documents/c/ellegro'
+gcc -c ./src/*.c
+mkdir -p build && mv ./*.o ./build
+cp -r ./resources ./build
+gcc ./build/*.o -o ./build/main  -lallegro -lallegro_main -lallegro_font -lallegro_image -lallegro_primitives
+chmod 755 ./build/main
+./build/main -AppleMagnifiedMode YES
+rm -rf build
+make: Leaving directory `/Users/emircengiz/Documents/c/ellegro'
+ 
